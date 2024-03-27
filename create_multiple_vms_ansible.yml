@@ -20,6 +20,6 @@
       state: poweredon
     networks: 
       - name: "t1-vrfa-segment" 
- loop: "{{ servers }}"
+    loop: "{{ servers }}"
     async: 60
     poll: 0
