@@ -7,5 +7,5 @@ datastore: ESXI1
 vmtemplate: ubuntu2204-template-100gb-thin
 vmcluster: Prod-Cluster
 servers:
-  - test_vm3
-  - test_vm4
+  - test_vm5
+  - test_vm6
