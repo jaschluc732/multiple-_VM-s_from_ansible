@@ -3,7 +3,7 @@
   hosts: localhost 
   gather_facts: false
   vars_files: 
-    multiple_vms.yml
+    variables.yml
   tasks: 
   - name: Clone multiple VMs from template
     local_action:
