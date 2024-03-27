@@ -18,7 +18,6 @@
       cluster: "{{ vmcluster }}"
       datacenter: NSXT
       state: poweredon
-    with_items: "{{ servers }}"
  loop: "{{ servers }}"
     async: 60
     poll: 0
