@@ -17,6 +17,7 @@
       name: "{{ item }}"
       cluster: "{{ vmcluster }}"
       datacenter: NSXT
+      wait_for_ip_address: False
       state: poweredon
       networks: 
         - name: "t1-vrfa-segment" 
