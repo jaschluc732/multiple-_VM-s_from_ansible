@@ -17,8 +17,8 @@
       name: "{{ item }}"
       cluster: "{{ vmcluster }}"
       datacenter: NSXT
-      wait_for_ip_address: False
-      state: poweredoff
+      wait_for_ip_address: True
+      state: poweredon
       networks: 
         - name: "t1-vrfa-segment" 
     loop: "{{ servers }}"
