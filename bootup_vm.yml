@@ -7,7 +7,7 @@
   tasks: 
   - name: Power on VMs
     local_action:
-      vmware_guest_powerstate: 
+      module: vmware_guest 
       hostname: "{{ vcenter_hostname }}"
       username: "{{ username }}"
       password: "{{ password }}"
