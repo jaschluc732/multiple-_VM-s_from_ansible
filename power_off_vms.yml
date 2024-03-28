@@ -5,7 +5,7 @@
   vars_files: 
     variables.yml
   tasks: 
-  - name: Power on VMs
+  - name: Power off VMs
     local_action:
       module: vmware_guest
       hostname: "{{ vcenter_hostname }}"
