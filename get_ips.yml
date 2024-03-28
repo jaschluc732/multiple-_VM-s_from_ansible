@@ -9,7 +9,7 @@
   tasks:
     - name: Fetch IP address using shell command
       vars:
-        command: " {{ item }} -I | awk '{print $1}'"
+        command: "{{ item }} -I | awk '{print $1}'"
       shell: "{{ command }}"
       register: ip_address_result
 
