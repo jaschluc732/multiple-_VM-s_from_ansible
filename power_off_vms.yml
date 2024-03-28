@@ -1,0 +1,20 @@
+---
+- name: Power-off all VMs
+  hosts: localhost 
+  gather_facts: no
+  vars_files: 
+    variables.yml
+  tasks: 
+  - name: Power on VMs
+    local_action:
+      module: vmware_guest
+      hostname: "{{ vcenter_hostname }}"
+      username: "{{ username }}"
+      password: "{{ password }}"
+      validate_certs: no      
+      folder: "{{ folder }}"
+      name: "{{ item }}"
+      cluster: "{{ vmcluster }}"
+      datacenter: NSXT
+      state: powered-off
+    loop: "{{ servers }}"
