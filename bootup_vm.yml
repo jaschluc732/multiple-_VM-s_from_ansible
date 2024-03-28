@@ -8,10 +8,11 @@
   - name: Power on VMs
     local_action:
       vmware_guest_powerstate: 
-      hostname: "{{ vcenter_hostname }}"
-      username: "{{ username }}"
-      password: "{{ password }}"
-      folder: NSXT/Templates
-      name: "{{ item }}"
-      state: powered-on
+       hostname: "{{ vcenter_hostname }}"
+       username: "{{ username }}"
+       password: "{{ password }}"
+       folder: NSXT/Templates
+       name: "{{ item }}"
+       state: powered-on
+       validate_certs: no
     loop: "{{ servers }}"
