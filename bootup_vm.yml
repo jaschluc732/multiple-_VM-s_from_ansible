@@ -1,5 +1,5 @@
 ---
-- name: Clone multiple VMs
+- name: Power-on all VMs
   hosts: localhost 
   gather_facts: no
   vars_files: 
@@ -7,12 +7,14 @@
   tasks: 
   - name: Power on VMs
     local_action:
-      module: vmware_guest 
+      module: vmware_guest
       hostname: "{{ vcenter_hostname }}"
       username: "{{ username }}"
       password: "{{ password }}"
-      folder: NSXT/Templates
+      validate_certs: no      
+      folder: "{{ folder }}"
       name: "{{ item }}"
+      cluster: "{{ vmcluster }}"
+      datacenter: NSXT
       state: powered-on
-      validate_certs: no
     loop: "{{ servers }}"
