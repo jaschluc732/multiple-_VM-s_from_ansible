@@ -7,19 +7,18 @@ datastore: ESXI1
 vmtemplate: ubuntu2204-template-1gb-thin
 vmcluster: Prod-Cluster
 servers:
-  - test_vm10
-  - test_vm11
-  - test_vm12
-  - test_vm13
-  - test_vm14
-  - test_vm15
-  - test_vm16
-  - test_vm17
-  - test_vm18
-  - test_vm19
-  - test_vm20
-  - test_vm21
-  - test_vm22
-  - test_vm23
-  - test_vm24
-  - test_vm25
+  - test_vm26
+  - test_vm27
+  - test_vm28
+  - test_vm29
+  - test_vm30
+  - test_vm31
+  - test_vm32
+  - test_vm33
+  - test_vm34
+  - test_vm35
+  - test_vm36
+  - test_vm37
+  - test_vm38
+  - test_vm39
+  - test_vm40
